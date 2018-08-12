@@ -1,9 +1,11 @@
 <?php
-	
-	/**
-		*jquery Append And Remvoe
-		*Happy Coding
-	*/
+
+/**
+##################################
+**author: arafat
+**job: jquery append remove
+###################################
+*/	
 
 ?>
 <!DOCTYPE html>
@@ -27,32 +29,26 @@
 	    transition-duration: 0.4s;
 	    cursor: pointer;
 	}
-
 	.button1 {
 	    background-color: white; 
 	    color: black; 
 	    border: 2px solid #4CAF50;
 	    border-radius: 9px;
 	}
-
 	.button1:hover {
 	    background-color: #4CAF50;
 	    color: white;
 	}
-
 	.button2 {
 	    background-color: white; 
 	    color: black; 
 	    border: 2px solid #f44336;
 	    border-radius: 9px;
 	}
-
 	.button2:hover {
 	    background-color: #f44336;
 	    color: white;
 	}
-
-
 	.button5:hover {
 	    background-color: #555555;
 	    color: white;
@@ -78,26 +74,16 @@
   crossorigin="anonymous"></script>
 
  <script>
-
 $(document).ready(function() {
-
 	//On click add Div 
 	$('.add').click(function(e) {
 	    e.preventDefault();
-
 	    $(".append_here").append( '<div class="remove"> <h3 class="close"> I append in here .... </h3>'+ '<button class="button button2">Remove</button> </div>' );
 	});
-
 	
 	//Remove The current Div
-	$('.append_here').on('click','.remove',function() {
-
-		$(this).closest(this).remove();
-
+	$('.append_here').on('click','.button2',function() {
+		$(this).closest(".remove").remove();
    });
-
-
 });
-
-
 </script>
